@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+    id: admin-user-insert
+    author: thilanMJ
+    changes:
+      - sqlFile:
+          dbms: h2, oracle, mysql,
+          encoding: utf8
+          endDelimiter: \nGO
+          path: ../path/file.sql
+          relativeToChangelogFile: true
+          splitStatements: true
+          stripComments: true

@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+        id: 3
+        author: thilanMJ
+        changes:
+          - addForeignKeyConstraint:
+              baseColumnNames: role_id
+              baseTableName: role
+              constraintName: fk_role_permission
+              deferrable: true
+              initiallyDeferred: true
+              onDelete: CASCADE
+              onUpdate: RESTRICT
+              referencedColumnNames: id
+              referencedTableName: person
